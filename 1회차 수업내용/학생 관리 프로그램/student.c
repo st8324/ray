@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "student.h"
 #include <stdio.h>
+#include <malloc.h>
 
 void printMenu() {
 	printf("-------메뉴-----\n");
@@ -44,4 +45,56 @@ Student* insertStuent(Student* std, int* nowCount, int* maxCount) {
 		std = stdTmp;
 	}
 	return std;
+}
+void printStudent(Student* std, int nowCount) {
+	for (int i = 0; i < nowCount; i++) {
+		printf("--------------------\n");
+		printf("학교     : %s\n", std[i].schoolName);
+		printf("이름     : %s\n", std[i].name);
+		printf("입학년도 : %d\n", std[i].year);
+		printf("학년     : %d\n", std[i].grade);
+		printf("학반     : %d\n", std[i].class);
+		printf("번호     : %d\n", std[i].num);
+		printf("국어     : %d\n", std[i].score.kor);
+		printf("영어     : %d\n", std[i].score.eng);
+		printf("수학     : %d\n", std[i].score.math);
+		printf("--------------------\n");
+	}
+}
+Student* loadFile(const char *fileName, int* nowCount, int* maxCount) {
+	FILE *fp = fopen(fileName, "r");
+	//파일 열기에 실패하면 *maxCount개만큼 배열을 생성하여 반환
+	if (fp == NULL) {
+		return (Student*)malloc(sizeof(Student) * *maxCount);
+	}
+	//파일 열기에 성공하면
+	//저장된 학생 수
+	fscanf(fp,"%d", nowCount);
+	if (nowCount > maxCount) {
+		maxCount = nowCount + 10;
+	}
+	Student*  std = (Student*)malloc(sizeof(Student) * *maxCount);
+	for (int i = 0; i < *nowCount; i++) {
+		fscanf(fp,"%s %s %d %d %d %d %d %d %d",
+			std[i].schoolName, std[i].name, &std[i].year,
+			&std[i].grade, &std[i].class, &std[i].num, 
+			&std[i].score.kor, &std[i].score.eng, &std[i].score.math);
+	}
+	if (fp != NULL) {
+		fclose(fp);
+	}
+	return std;
+}
+void saveFile(const char* fileName, const Student* std, int nowCount) {
+	FILE* fp = fopen(fileName, "w");
+
+	fprintf(fp, "%d\n", nowCount);
+	for (int i = 0; i < nowCount; i++) {
+		fprintf(fp, "%s\t%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\n",
+			std[i].schoolName, std[i].name, std[i].year,
+			std[i].grade, std[i].class, std[i].num,
+			std[i].score.kor, std[i].score.eng, std[i].score.math);
+	}
+
+	fclose(fp);
 }

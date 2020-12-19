@@ -6,28 +6,24 @@
 
 int main() {
 	Menu menu = 0;
-	int maxCount = 2;
+	int maxCount = 300;
 	int nowCount = 0;
 	//학생 배열
 	Student *std = (Student *)malloc(sizeof(Student) * maxCount);
+	char* fileName = "student.xls";
 	//불러오기 기능
-
+	std = loadFile(fileName, &nowCount, &maxCount);
+	
 	do {
 		printMenu();
 		scanf("%d", &menu);
 		Student tmp;
 		switch (menu)
 		{
-		case ADD:	
-			std = insertStuent(std, &nowCount, &maxCount);
-			break;
+		case ADD:	std = insertStuent(std, &nowCount, &maxCount);	break;
 		case MOD:	printf("수정기능\n");	break;
 		case DEL:	printf("삭제기능\n");	break;
-		case SEA:	
-			for (int i = 0; i < nowCount; i++) {
-				printf("이름 : %s\n", std[i].name);
-			}
-			break;
+		case SEA:	printStudent(std, nowCount);					break;
 		case ESC:	printf("종료기능\n");	break;
 		default:	printf("잘못된기능\n");	break;
 		}
@@ -37,6 +33,7 @@ int main() {
 		system("cls");
 	} while (menu != ESC);
 	//저장기능
+	saveFile(fileName, std, nowCount);
 	if (std != NULL) {
 		free(std);
 	}

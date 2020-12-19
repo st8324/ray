@@ -23,3 +23,9 @@ typedef struct Student {
 void printMenu();
 //학생 정보를 배열에 추가
 Student* insertStuent(Student *std,int* nowCount,int* maxCount);
+//학생 정보 출력
+void printStudent(Student *std, int nowCount);
+//파일에서 학생 정보를 불러와서 학생 배열에 저장
+Student* loadFile(const char* fileName,int *nowCount,int *maxCount);
+//학생 배열을 이용하여 정보를 파일에 저장
+void saveFile(const char* fileName,const Student* std, int nowCount);
