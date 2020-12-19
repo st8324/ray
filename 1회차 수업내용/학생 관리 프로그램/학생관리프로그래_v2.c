@@ -24,7 +24,7 @@ int main() {
 		case MOD:	printf("수정기능\n");	break;
 		case DEL:	printf("삭제기능\n");	break;
 		case SEA:	printStudent(std, nowCount);					break;
-		case ESC:	printf("종료기능\n");	break;
+		case ESC:	break;
 		default:	printf("잘못된기능\n");	break;
 		}
 		printf("아무키나 누르세요....");
@@ -37,5 +37,8 @@ int main() {
 	if (std != NULL) {
 		free(std);
 	}
+	printf("\n-------------------------\n");
+	printf("프로그램을 종료합니다....");
+	printf("\n-------------------------\n");
 	return 0;
 }
