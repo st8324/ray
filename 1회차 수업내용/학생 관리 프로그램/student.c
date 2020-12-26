@@ -2,6 +2,7 @@
 #include "student.h"
 #include <stdio.h>
 #include <malloc.h>
+#include <string.h>
 
 void printMenu() {
 	printf("-------메뉴-----\n");
@@ -87,8 +88,9 @@ Student* loadFile(const char *fileName, int* nowCount, int* maxCount) {
 }
 void saveFile(const char* fileName, const Student* std, int nowCount) {
 	FILE* fp = fopen(fileName, "w");
-
+	//fprintf(fp, "저장된 학생수\n");
 	fprintf(fp, "%d\n", nowCount);
+	//fprintf(fp, "학교명\t이름\t입학년도\t학년\t반\t번호\t국어\t영어\t수학\n");
 	for (int i = 0; i < nowCount; i++) {
 		fprintf(fp, "%s\t%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\n",
 			std[i].schoolName, std[i].name, std[i].year,
@@ -97,4 +99,40 @@ void saveFile(const char* fileName, const Student* std, int nowCount) {
 	}
 
 	fclose(fp);
+}
+Student inputSearchStudent(const char* str) {
+	Student tmp;
+	printf("%s\n", str);
+	printf("입학년도 : ");
+	scanf("%d", &tmp.year);
+	printf("학년 : ");
+	scanf("%d", &tmp.grade);
+	printf("학반 : ");
+	scanf("%d", &tmp.class);
+	printf("번호 : ");
+	scanf("%d", &tmp.num);
+	return tmp;
+}
+
+int modifyStudent(Student* std, int nowCount, Student s) {
+	for (int i = 0; i < nowCount; i++) {
+		if (s.year == std[i].year && s.grade == std[i].grade &&
+			s.class == std[i].class && s.num == std[i].num) {
+			printf("이름 : ");
+			scanf("%s", s.name);
+			printf("국어 : ");
+			scanf("%d", &s.score.kor);
+			printf("영어 : ");
+			scanf("%d", &s.score.eng);
+			printf("수학 : ");
+			scanf("%d", &s.score.math);
+			strcpy(s.schoolName, std[i].schoolName);
+			std[i] = s;
+			return 1;
+		}
+	}
+	return 0;
+}
+int deleteStudent(Student* std, int* nowCount, Student s) {
+
 }
