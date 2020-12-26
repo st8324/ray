@@ -134,5 +134,15 @@ int modifyStudent(Student* std, int nowCount, Student s) {
 	return 0;
 }
 int deleteStudent(Student* std, int* nowCount, Student s) {
-
+	for (int i = 0; i < *nowCount; i++) {
+		if (s.year == std[i].year && s.grade == std[i].grade &&
+			s.class == std[i].class && s.num == std[i].num) {
+			for (int j = i; j < *nowCount - 1; j++) {
+				std[j] = std[j + 1];
+			}
+			(*nowCount)--;
+			return 1;
+		}
+	}
+	return 0;
 }

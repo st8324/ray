@@ -30,7 +30,12 @@ int main() {
 			}
 			break;
 		case DEL:	
-			printf("삭제기능\n");	
+			tmp = inputSearchStudent("---삭제할 학생정보 입력---\n");
+			if (!deleteStudent(std, &nowCount, tmp)) {
+				printf("-------------------------\n");
+				printf("해당 학생정보가 없습니다.\n");
+				printf("-------------------------\n");
+			}
 			break;
 		case SEA:	printStudent(std, nowCount);					break;
 		case ESC:	break;
