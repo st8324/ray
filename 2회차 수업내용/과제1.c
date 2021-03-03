@@ -11,5 +11,14 @@ int main() {
 	* 7 / 2.00 = 3.50
 	* 7 % 2 = 1
 	*/
+	int num1 = 0, num2 = 0;
+	printf("두 정수를 입력하세요(예:7 2) : ");
+	scanf("%d %d",&num1 ,&num2);
+	
+	printf("%d + %d = %d\n", num1, num2, num1 + num2);
+	printf("%d - %d = %d\n", num1, num2, num1 - num2);
+	printf("%d * %d = %d\n", num1, num2, num1 * num2);
+	printf("%d / %d = %.2f\n", num1, num2, (double)num1 / num2);
+	printf("%d %% %d = %d\n", num1, num2, num1 % num2);
 	return 0;
 }
