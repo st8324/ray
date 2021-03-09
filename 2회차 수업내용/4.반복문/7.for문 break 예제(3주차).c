@@ -4,8 +4,8 @@
 int main() {
 	/* 
 	* - break 
-	*   - switch¹®À» ºüÁ® ³ª°¡´Â ¿ªÇÒ
-	*   - ¹Ýº¹¹®À» ºüÁ® ³ª°¡´Â ¿ªÇÒ(if¹®°ú ÇÔ²² ¾²ÀÓ)
+	*   - switchë¬¸ì„ ë¹ ì ¸ ë‚˜ê°€ëŠ” ì—­í• 
+	*   - ë°˜ë³µë¬¸ì„ ë¹ ì ¸ ë‚˜ê°€ëŠ” ì—­í• (ifë¬¸ê³¼ í•¨ê»˜ ì“°ìž„)
 	*/
 	int i = 0;
 	for (i = 1; i <= 5; i++) {

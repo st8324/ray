@@ -4,12 +4,12 @@
 int main() {
 	/* 
 	* p.93
-	* - ÀÌÁß ¹Ýº¹¹® : ¹Ýº¹¹®ÀÇ ½ÇÇà¹®À¸·Î ¹Ýº¹¹®ÀÌ ³ª¿À´Â °æ¿ì
-	* - 2´ÜºÎÅÍ 9´Ü±îÁö ±¸±¸´Ü ÀüÃ¼¸¦ Ãâ·ÂÇÏ´Â ÄÚµå¸¦ ÀÛ¼ºÇÏ¼¼¿ä.
+	* - ì´ì¤‘ ë°˜ë³µë¬¸ : ë°˜ë³µë¬¸ì˜ ì‹¤í–‰ë¬¸ìœ¼ë¡œ ë°˜ë³µë¬¸ì´ ë‚˜ì˜¤ëŠ” ê²½ìš°
+	* - 2ë‹¨ë¶€í„° 9ë‹¨ê¹Œì§€ êµ¬êµ¬ë‹¨ ì „ì²´ë¥¼ ì¶œë ¥í•˜ëŠ” ì½”ë“œë¥¼ ìž‘ì„±í•˜ì„¸ìš”.
 	*/
 	int num = 7, i = 0;
 	for (num = 2; num <= 9; num++) {
-		printf("%d´Ü\n", num);
+		printf("%dë‹¨\n", num);
 		for (i = 1; i <= 9; i++) {
 			printf("%d x %d = %d\n", num, i, num * i);
 		}
