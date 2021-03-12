@@ -1,8 +1,10 @@
+
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main() {
-	/* 
+  /* 
 	* - 두 정수의 최소 공배수를 구하는 코드를 작성하세요.
 	* - 2의 배수 : 2, 4, 6, 8, 10, ...
 	* - 공배수 : 공통으로 있는 배수
@@ -16,6 +18,24 @@ int main() {
 	*			   lcm에 i를 저장하고 반복문 종료
 	* 반복문종료: lcm 출력
 	*/
-	
-	return 0;
+  int num1 = 4, num2 = 6;
+  int i, lcm = num1 * num2;
+  //방법1
+  for(i = 1; i<= num1 * num2; i++){
+    if(i % num1 == 0 && i % num2 == 0){
+      lcm = i;
+      break;
+    }
+  }
+  printf("%d와 %d의 최소 공배수 : %d\n", num1, num2, lcm);
+  //방법2
+  for(i = num1; i<= num1 * num2; i += num1){
+    if(i % num2 == 0){
+      lcm = i;
+      break;
+    }
+  }
+  printf("%d와 %d의 최소 공배수 : %d\n", num1, num2, lcm);
+
+  return 0;
 }
