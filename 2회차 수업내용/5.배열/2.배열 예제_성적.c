@@ -3,20 +3,20 @@
 
 int main() {
 	/* 
-	* - 5°³Â¥¸® ¹è¿­À» »ý¼ºÇÏ¿© 5°³ÀÇ Á¤¼ö ¼ºÀûÀ» ÀÔ·Â ¹Þ¾Æ ¹è¿­¿¡
-	*   ÀúÀåÇÑ ÈÄ Ãâ·ÂÇÏ´Â ¿¹Á¦
-	* ¹è¿­¸í : score
-	* Å©±â : 5
-	* Á¤¼ö
+	* - 5ê°œì§œë¦¬ ë°°ì—´ì„ ìƒì„±í•˜ì—¬ 5ê°œì˜ ì •ìˆ˜ ì„±ì ì„ ìž…ë ¥ ë°›ì•„ ë°°ì—´ì—
+	*   ì €ìž¥í•œ í›„ ì¶œë ¥í•˜ëŠ” ì˜ˆì œ
+	* ë°°ì—´ëª… : score
+	* í¬ê¸° : 5
+	* ì •ìˆ˜
 	*/
 	int score[5] = { 0 };
 	int size = sizeof(score) / sizeof(int);
 	for (int i = 0; i < size; i++) {
-		printf("¼ºÀûÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+		printf("ì„±ì ì„ ìž…ë ¥í•˜ì„¸ìš” : ");
 		scanf("%d", &score[i]);
 	}
 	for (int i = 0; i < size; i++) {
-		printf("¼ºÀû : %d\n", score[i]);
+		printf("ì„±ì  : %d\n", score[i]);
 	}
 
 	

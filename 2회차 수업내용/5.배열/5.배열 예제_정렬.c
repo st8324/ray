@@ -2,18 +2,18 @@
 #include <stdio.h>
 
 int main() {
-	/* - Á¤·Ä ¿¹Á¦(¹öºí Á¤·Ä) 
+	/* - ì •ë ¬ ì˜ˆì œ(ë²„ë¸” ì •ë ¬) 
 	* 9, 8, 10, 5, 3
 	* 8, 9, 5, 3, 10
 	*/
 	int arr[5] = { 9, 8, 10, 5, 3 };
 	int size = sizeof(arr) / sizeof(int);
-	//¹è¿­ °ª Ãâ·Â
+	//ë°°ì—´ ê°’ ì¶œë ¥
 	for (int i = 0; i < size; i++) {
 		printf("%d ", arr[i]);
 	}
 	printf("\n");
-	//¹öºí Á¤·Ä
+	//ë²„ë¸” ì •ë ¬
 	for (int i = 0; i < size - 1; i++) {
 		for (int k = 0; k < size - 1; k++) {
 			if (arr[k] > arr[k + 1]) {
@@ -23,7 +23,7 @@ int main() {
 			}
 		}
 	}
-	//¹è¿­°ª Ãâ·Â
+	//ë°°ì—´ê°’ ì¶œë ¥
 	for (int i = 0; i < size; i++) {
 		printf("%d ", arr[i]);
 	}

@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main() {
-	/* - ±¸±¸´Ü 7´Ü Ãâ·ÂÀ» while¹®À» ÀÌ¿ëÇÏ¿© ÀÛ¼ºÇÏ¼¼¿ä. */
+	/* - êµ¬êµ¬ë‹¨ 7ë‹¨ ì¶œë ¥ì„ whileë¬¸ì„ ì´ìš©í•˜ì—¬ ìž‘ì„±í•˜ì„¸ìš”. */
 	int i = 1;
 	while ( i <= 9 ) {
 		printf("%d x %d = %d\n", 7, i , 7 * i );
