@@ -1,10 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 /* 
-* - ±â´É : µÎ Á¤¼öÀÇ ÃÖ´ë °ø¾à¼ö¸¦ ¾Ë·ÁÁÖ´Â ÇÔ¼ö
-* - ¸Å°³º¯¼ö : µÎ Á¤¼ö => int num1, int num2
-* - ¸®ÅÏÅ¸ÀÔ : ÃÖ´ë °ø¾à¼ö => Á¤¼ö => int
-* - ÇÔ¼öÀÌ¸§ : GCD */
+* - ê¸°ëŠ¥ : ë‘ ì •ìˆ˜ì˜ ìµœëŒ€ ê³µì•½ìˆ˜ë¥¼ ì•Œë ¤ì£¼ëŠ” í•¨ìˆ˜
+* - ë§¤ê°œë³€ìˆ˜ : ë‘ ì •ìˆ˜ => int num1, int num2
+* - ë¦¬í„´íƒ€ì… : ìµœëŒ€ ê³µì•½ìˆ˜ => ì •ìˆ˜ => int
+* - í•¨ìˆ˜ì´ë¦„ : GCD */
 int GCD(int num1, int num2) {
 	int gcd = 1;
 	for (int i = 1; i <= num1; i++) {
@@ -18,8 +18,8 @@ int GCD(int num1, int num2) {
 int main() {
 	int num1 = 8, num2 = 12, gcd = 1;;
 	gcd = GCD(num1, num2);
-	printf("ÃÖ´ë °ø¾à¼ö : %d\n", gcd);
+	printf("ìµœëŒ€ ê³µì•½ìˆ˜ : %d\n", gcd);
 	gcd = GCD(213, 412);
-	printf("ÃÖ´ë °ø¾à¼ö : %d\n", gcd);
+	printf("ìµœëŒ€ ê³µì•½ìˆ˜ : %d\n", gcd);
 	return 0;
 }

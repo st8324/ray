@@ -3,13 +3,13 @@
 #include <malloc.h>
 
 int main() {
-	/* Æ÷ÀÎÅÍ¸¦ ÅëÇØ ¹è¿­À» ¸¸µå´Â ÀÛ¾÷ => µ¿ÀûÇÒ´ç
-	* malloc : ¹è¿­ÀÇ ÀüÃ¼ Å©±â(¹ÙÀÌÆ®)¸¦ ÁÖ¸é Å©±â¿¡ ¸ÂÃç 
-	*          ¹è¿­À» »ı¼º
+	/* í¬ì¸í„°ë¥¼ í†µí•´ ë°°ì—´ì„ ë§Œë“œëŠ” ì‘ì—… => ë™ì í• ë‹¹
+	* malloc : ë°°ì—´ì˜ ì „ì²´ í¬ê¸°(ë°”ì´íŠ¸)ë¥¼ ì£¼ë©´ í¬ê¸°ì— ë§ì¶° 
+	*          ë°°ì—´ì„ ìƒì„±
 	*/
 	int size = 10;
-	int *arr1 = (int*)malloc(sizeof(int) * size);//10°³
-	char *carr1 = (char*)malloc(sizeof(int) * size);//40°³
+	int *arr1 = (int*)malloc(sizeof(int) * size);//10ê°œ
+	char *carr1 = (char*)malloc(sizeof(int) * size);//40ê°œ
 	//int *arr1 = (int*)malloc(40);
 	//int *arr1 = (int*)malloc(4 * 10);
 	for (int i = 0; i < 10; i++) {

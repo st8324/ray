@@ -4,7 +4,7 @@
 
 int main() {
 	char arr1[11] = "abcd";
-	char* arr2 = "abcd";//¹®ÀÚ¿­ »ó¼ö, ¹Ù²Ü ¼ö ¾øÀ½
+	char* arr2 = "abcd";//ë¬¸ìì—´ ìƒìˆ˜, ë°”ê¿€ ìˆ˜ ì—†ìŒ
 
 	printf("arr1 = %s\n", arr1);
 	printf("arr2 = %s\n", arr2);

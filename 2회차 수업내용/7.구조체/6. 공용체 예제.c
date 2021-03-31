@@ -10,7 +10,7 @@ int main() {
 	c.rgb[1] = (unsigned int)0;
 	c.rgb[0] = (unsigned int)0;
 	//c : 00000000 11111111 00000000 00000000
-	printf("»¡°£»öÀÇ »ö»ó ÄÚµå : #%X\n", c.code);
+	printf("ë¹¨ê°„ìƒ‰ì˜ ìƒ‰ìƒ ì½”ë“œ : #%X\n", c.code);
 
 	return 0;
 }
