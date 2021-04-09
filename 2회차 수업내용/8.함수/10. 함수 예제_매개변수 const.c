@@ -1,8 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-//- Áö¿ª º¯¼ö ¾Õ¿¡ const¸¦ ºÙÀÌ¸é »ó¼ö°¡ µÇ°í,
-//- ¸Å°³ º¯¼ö Áß Æ÷ÀÎÅÍ º¯¼ö ¾Õ¿¡ const¸¦ ºÙÀÌ¸é ÇØ´ç ÇÔ¼ö¾È¿¡¼­ 
-//  ÇØ´ç Æ÷ÀÎÅÍ º¯¼ö¸¦ »ó¼öÃë±ÞÇÑ´Ù.
+//- ì§€ì—­ ë³€ìˆ˜ ì•žì— constë¥¼ ë¶™ì´ë©´ ìƒìˆ˜ê°€ ë˜ê³ ,
+//- ë§¤ê°œ ë³€ìˆ˜ ì¤‘ í¬ì¸í„° ë³€ìˆ˜ ì•žì— constë¥¼ ë¶™ì´ë©´ í•´ë‹¹ í•¨ìˆ˜ì•ˆì—ì„œ 
+//  í•´ë‹¹ í¬ì¸í„° ë³€ìˆ˜ë¥¼ ìƒìˆ˜ì·¨ê¸‰í•œë‹¤.
 void printArray(const int* arr, int size) {
 	for(int i = 0; i<size; i++){
 		printf("%d ", arr[i]);
