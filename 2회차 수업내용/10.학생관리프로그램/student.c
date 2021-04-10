@@ -3,14 +3,14 @@
 #include "student.h"
 
 void printMenu() {
-	printf("-------¸Ş´º-------\n");
-	printf("1. ÇĞ»ı Á¤º¸ ÀÔ·Â\n");
-	printf("2. ÇĞ»ı Á¤º¸ Ãâ·Â\n");
-	printf("3. ÇĞ»ı Á¤º¸ ¼öÁ¤\n");
-	printf("4. ÇĞ»ı Á¤º¸ »èÁ¦\n");
-	printf("5. ÇÁ·Î±×·¥ Á¾·á\n");
+	printf("-------ë©”ë‰´-------\n");
+	printf("1. í•™ìƒ ì •ë³´ ì…ë ¥\n");
+	printf("2. í•™ìƒ ì •ë³´ ì¶œë ¥\n");
+	printf("3. í•™ìƒ ì •ë³´ ìˆ˜ì •\n");
+	printf("4. í•™ìƒ ì •ë³´ ì‚­ì œ\n");
+	printf("5. í”„ë¡œê·¸ë¨ ì¢…ë£Œ\n");
 	printf("------------------\n");
-	printf("¸Ş´º¸¦ ¼±ÅÃÇÏ¼¼¿ä : ");
+	printf("ë©”ë‰´ë¥¼ ì„ íƒí•˜ì„¸ìš” : ");
 }
 int searchStudent(const STUDENT* std, int count, STUDENT tmp) {
 	for (int i = 0; i < count; i++) {
@@ -24,41 +24,41 @@ int searchStudent(const STUDENT* std, int count, STUDENT tmp) {
 }
 STUDENT inputSearchInfo() {
 	STUDENT tmp;
-	printf("ÇĞ³â : ");
+	printf("í•™ë…„ : ");
 	scanf("%d", &tmp.grade);
-	printf("¹İ   : ");
+	printf("ë°˜   : ");
 	scanf("%d", &tmp.clas);
-	printf("¹øÈ£ : ");
+	printf("ë²ˆí˜¸ : ");
 	scanf("%d", &tmp.num);
 	return tmp;
 }
 void inputOtherInfo(STUDENT* tmp) {
-	printf("ÀÌ¸§ : ");
+	printf("ì´ë¦„ : ");
 	scanf("%s", tmp->name);
-	printf("±¹¾î : ");
+	printf("êµ­ì–´ : ");
 	scanf("%lf", &tmp->kor);
-	printf("¿µ¾î : ");
+	printf("ì˜ì–´ : ");
 	scanf("%lf", &tmp->eng);
-	printf("¼öÇĞ : ");
+	printf("ìˆ˜í•™ : ");
 	scanf("%lf", &tmp->math);
 }
 void printStudent(STUDENT* std, int count) {
 	for (int i = 0; i < count; i++) {
 		printf("---------------------------------\n");
-		/*printf("ÀÌ¸§ : %s\n", std[i].name);
-		printf("ÇĞ³â : %d\n", std[i].grade);
-		printf("¹İ   : %d\n", std[i].clas);
-		printf("¹øÈ£ : %d\n", std[i].num);
-		printf("±¹¾î : %.2lf\n", std[i].kor);
-		printf("¿µ¾î : %.2lf\n", std[i].eng);
-		printf("¼öÇĞ : %.2lf\n", std[i].math);*/
-		printf("%dÇĞ³â %d¹İ %d¹ø %s ±¹¾î : %.2lf, ¿µ¾î : %.2lf, ¼öÇĞ : %.2lf\n", 
+		/*printf("ì´ë¦„ : %s\n", std[i].name);
+		printf("í•™ë…„ : %d\n", std[i].grade);
+		printf("ë°˜   : %d\n", std[i].clas);
+		printf("ë²ˆí˜¸ : %d\n", std[i].num);
+		printf("êµ­ì–´ : %.2lf\n", std[i].kor);
+		printf("ì˜ì–´ : %.2lf\n", std[i].eng);
+		printf("ìˆ˜í•™ : %.2lf\n", std[i].math);*/
+		printf("%dí•™ë…„ %dë°˜ %dë²ˆ %s êµ­ì–´ : %.2lf, ì˜ì–´ : %.2lf, ìˆ˜í•™ : %.2lf\n", 
 			std[i].grade, std[i].clas, std[i].num, std[i].name,
 			std[i].kor, std[i].eng, std[i].math);
 	}
 	if (count == 0) {
 		printf("---------------------------------\n");
-		printf("ÀúÀåµÈ ÇĞ»ı Á¤º¸°¡ ¾ø½À´Ï´Ù.\n");
+		printf("ì €ì¥ëœ í•™ìƒ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.\n");
 	}
 	printf("---------------------------------\n");
 }
